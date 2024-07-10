@@ -1,0 +1,7 @@
+services:
+  - type: web
+    plan: free
+    name: bill_ocr
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn bill_ocr.asgi:application -k uvicorn.workers.UvicornWorker"
