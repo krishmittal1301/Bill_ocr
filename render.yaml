@@ -4,4 +4,4 @@ services:
     name: bill_ocr
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn bill_ocr.wsgi -k uvicorn.workers.UvicornWorker"
+    startCommand: "gunicorn bill_ocr.wsgi:application -k uvicorn.workers.UvicornWorker"
