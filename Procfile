@@ -1,1 +1,1 @@
-web: gunicorn bill_ocr.wsgi -k uvicorn.workers.UvicornWorker
+web: gunicorn bill_ocr.wsgi:application -k uvicorn.workers.UvicornWorker
